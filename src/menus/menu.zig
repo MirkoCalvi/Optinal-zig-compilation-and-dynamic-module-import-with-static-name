@@ -1,4 +1,5 @@
 const std = @import("std");
+const x_menu = @import("x_menu");
 
 pub const Menu_list = enum {
     Normal,
@@ -17,4 +18,8 @@ pub fn fromString(value: []const u8) Menu_list {
     } else {
         return Menu_list.Normal;
     }
+}
+
+pub fn printMenu() void {
+    x_menu.printMenu();
 }
